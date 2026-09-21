@@ -1,0 +1,10 @@
+{
+  "products": [
+    {
+      "id": "mastermodel1",
+      "name": "MasterModel1 (test model)",
+      "description": "Proof-of-concept model exported from SolidWorks.",
+      "model": "models/MasterModel1_00_test_2m.glb"
+    }
+  ]
+}

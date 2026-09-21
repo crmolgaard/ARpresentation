@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#111418" />
+    <title>Product AR Viewer</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 id="product-name">Loading…</h1>
+        <p id="product-description"></p>
+      </header>
+
+      <model-viewer
+        id="viewer"
+        camera-controls
+        touch-action="pan-y"
+        shadow-intensity="1"
+        shadow-softness="0.8"
+        exposure="1"
+        environment-image="neutral"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        ar-placement="floor"
+        ar-scale="fixed"
+        xr-environment
+        alt="3D model of the selected product"
+      >
+        <div slot="progress-bar" class="progress"><div class="progress-fill" id="progress-fill"></div></div>
+        <button slot="ar-button" id="ar-button" type="button">View in your room</button>
+      </model-viewer>
+
+      <p id="status" role="status"></p>
+      <p class="hint">Drag to rotate · pinch or scroll to zoom</p>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
